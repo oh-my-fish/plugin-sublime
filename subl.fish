@@ -1,5 +1,7 @@
 # SYNOPSIS
-#   subl [file]
+#   subl [options] [file ...]        edit the given files
+#   subl [options] [directory ...]   open the given directories
+#   subl [options]                   edit stdin
 #
 
 function subl -d "Open Sublime Text"
