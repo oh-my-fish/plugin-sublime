@@ -22,6 +22,7 @@ function subl -d "Open Sublime Text"
   else if test -x "/opt/sublime_text_3/sublime_text"
     "/opt/sublime_text_3/sublime_text" $argv
   else
-    echo "No Sublime Text installation found"
+    echo "No Sublime Text installation found" >&2
+    return 1
   end
 end
