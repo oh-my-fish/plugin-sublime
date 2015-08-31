@@ -20,7 +20,10 @@ Usage
 -----
 
 ```fish
-$ subl [file or path]
+$ subl [options] [file ...]        edit the given files
+$ subl [options] [directory ...]   open the given directories
+$ subl [options] -                 edit stdin
+$ subl --help                      get help :)
 ```
 
 License
