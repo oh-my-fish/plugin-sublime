@@ -29,7 +29,7 @@ function subl -d "Open Sublime Text"
     set argv $opts $projects[1]
   end
 
-  if begin; which subl > /dev/null; and test -x (which subl); end
+  if begin; which subl > /dev/null 2>&1; and test -x (which subl); end
     command subl $argv
   else if test -d "/Applications/Sublime Text.app"
     "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" $argv
