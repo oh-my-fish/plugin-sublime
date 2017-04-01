@@ -33,6 +33,8 @@ function subl -d "Open Sublime Text"
     command subl $argv
   else if test -d "/Applications/Sublime Text.app"
     "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" $argv
+    else if test -d "/Applications/Desarrollo/Sublime Text.app"
+    "/Applications/Desarrollo/Sublime Text.app/Contents/SharedSupport/bin/subl" $argv
   else if test -d "/Applications/Sublime Text 2.app"
     "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" $argv
   else if test -d "/Applications/Sublime Text 3.app"
