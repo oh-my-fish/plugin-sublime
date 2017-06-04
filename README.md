@@ -16,6 +16,12 @@ Install
 $ omf install sublime
 ```
 
+If your Sublime Text app is in a non-standard location, you can add specify the path to `subl` in your `config.fish`:
+
+```fish
+set -g SUBL_PATH "/Applications/Desarrollo/Sublime Text.app/Contents/SharedSupport/bin/subl"
+```
+
 Usage
 -----
 
@@ -24,12 +30,6 @@ $ subl [options] [file ...]        edit the given files
 $ subl [options] [directory ...]   open the given directories
 $ subl [options] -                 edit stdin
 $ subl --help                      get help :)
-```
-
-If your Sublime Text app is in a non-standard location, you can add specify the path to `subl` in your `config.fish`:
-
-```fish
-set -g SUBL_PATH "/Applications/Desarrollo/Sublime Text.app/Contents/SharedSupport/bin/subl"
 ```
 
 License
