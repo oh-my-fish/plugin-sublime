@@ -29,7 +29,9 @@ function subl -d "Open Sublime Text"
     set argv $opts $projects[1]
   end
 
-  if begin; which subl > /dev/null 2>&1; and test -x (which subl); end
+  if set -e SUBL_PATH
+    eval $SUBL_PATH $argv
+  else if begin; which subl > /dev/null 2>&1; and test -x (which subl); end
     command subl $argv
   else if test -d "/Applications/Sublime Text.app"
     "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" $argv
@@ -48,7 +50,8 @@ function subl -d "Open Sublime Text"
   else if test -x "/opt/sublime_text_3/sublime_text"
     "/opt/sublime_text_3/sublime_text" $argv
   else
-    echo "No Sublime Text installation found" >&2
+    echo 'No Sublime Text installation found' >&2
+    echo 'Add `subl` to your $PATH or set $SUBL_PATH' >&2
     return 1
   end
 end
