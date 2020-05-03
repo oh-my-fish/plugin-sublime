@@ -31,7 +31,7 @@ function subl -d "Open Sublime Text"
 
   if set -e SUBL_PATH
     eval $SUBL_PATH $argv
-  else if begin; which subl > /dev/null 2>&1; and test -x (which subl); end
+  else if command -sq subl
     command subl $argv
   else if test -d "/Applications/Sublime Text.app"
     "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" $argv
